@@ -27,5 +27,7 @@ jobs:
       with:
         path:
           docs
+    - name: Deploy pages
+      uses: actions/deploy-pages
       env:
         CI: true
