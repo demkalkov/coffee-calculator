@@ -6,7 +6,7 @@
 
 <main class="p-4 text-lg">
   <div class="flex justify-center">
-    <img src={logo} alt="Cofee cup" />
+    <img src={logo} alt="Coffee cup" class="h-24" />
   </div>
 
   <Calculator />
