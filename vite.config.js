@@ -11,9 +11,6 @@ export default defineConfig({
     emptyOutDir: true,
     minify: true,
     assetsDir: 'assets',
-    assetsInclude: [
-      '*.webmanifest',
-      '**/assets/*.webp'
-    ]
+    assetsInlineLimit: 0
   }
 })
