@@ -2,7 +2,7 @@
   "name": "Coffee Calculator",
   "short_name": "CofeCa",
   "categories": ["food", "utilities"],
-  "start_url": ".",
+  "start_url": "https://demkalkov.github.io/coffee-calculator",
   "display": "standalone",
   "background_color": "#fff",
   "theme_color": "#fff",
