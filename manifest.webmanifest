@@ -9,17 +9,17 @@
   "description": "Just a sample app to ease moring brew and try out the framework and GitHub pages",
   "icons": [
     {
-      "src": "./assets/cup-48.webp",
+      "src": "./cup-48.webp",
       "sizes": "48x48",
       "type": "image/webp"
     },
     {
-      "src": "./assets/cup-96.webp",
+      "src": "./cup-96.webp",
       "sizes": "96x96",
       "type": "image/webp"
     },
     {
-      "src": "./assets/cup-192.webp",
+      "src": "./cup-192.webp",
       "sizes": "192x192",
       "type": "image/webp"
     }
