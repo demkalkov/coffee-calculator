@@ -1,20 +1,11 @@
 <script>
-  let ratio = 16.67;
-  let weight = 30;
-  let volume = 0;
+  import { calculate } from "./calculator";
+  import { save, get } from "./state";
+
+  let ratio = get("ratio", 16.67);
+  let weight = get("weight", 30);
+  let volume = get("volume", 0);
   let type = "volume";
-
-  const calculate = (r, w, v, t) => {
-    if (t === "volume") {
-      return Math.round(w * r * 100) / 100;
-    }
-
-    if (t === "weight") {
-      return Math.round(v / r * 100) / 100;
-    }
-
-    return Math.round(v / w * 100) / 100;
-  };
 
   const onChange = () => {
     if (type === "volume") {
@@ -28,6 +19,10 @@
     if (type === "ratio") {
       ratio = calculate(ratio, weight, volume, type);
     }
+
+    save(volume, "volume");
+    save(weight, "weight");
+    save(ratio, "ratio");
   };
 
   onChange();
@@ -36,24 +31,28 @@
 <div class="grid auto-cols-[min_auto] gap-x-4 gap-y-2">
   <strong class="col-span-2">Ratio</strong>
   <div>
-    <input type="radio" value="ratio" bind:group={type}/>
+    <input type="radio" value="ratio" bind:group={type} />
   </div>
   <div>
     <input
       type="number"
       class="border rounded-sm border-gray-400"
-      bind:value={ratio} on:change={onChange} />
+      bind:value={ratio}
+      on:change={onChange}
+    />
   </div>
 
   <strong class="col-span-2">Weight</strong>
   <div>
-    <input type="radio" value="weight" bind:group={type}/>
+    <input type="radio" value="weight" bind:group={type} />
   </div>
   <div>
     <input
       type="number"
       class="border rounded-sm border-gray-400"
-      bind:value={weight} on:change={onChange}/>
+      bind:value={weight}
+      on:change={onChange}
+    />
   </div>
 
   <strong class="col-span-2">Volume</strong>
@@ -64,6 +63,8 @@
     <input
       type="number"
       class="border rounded-sm border-gray-400"
-      bind:value={volume} on:change={onChange}/>
+      bind:value={volume}
+      on:change={onChange}
+    />
   </div>
 </div>
