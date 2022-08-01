@@ -9,6 +9,11 @@ export default defineConfig({
   build: {
     outDir: 'docs',
     emptyOutDir: true,
-    minify: true
+    minify: true,
+    assetsDir: 'assets',
+    assetsInclude: [
+      '*.webmanifest',
+      '**/assets/*.webp'
+    ]
   }
 })
