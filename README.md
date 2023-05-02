@@ -1,10 +1,14 @@
-## Description
-Just a sample app to ease moring brew and try out the framework and GitHub pages
+## Getting Started
 
----
+First, run the development server:
 
-## Stack
+```bash
+npm run dev
+```
 
-* Svelte
-* Vite
-* Tailwind
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+
+
+## Github pages
+
+https://demkalkov.github.io/coffee-calculator/

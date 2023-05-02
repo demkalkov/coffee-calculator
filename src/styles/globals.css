@@ -1,0 +1,31 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground: #000;
+  --background-start: #abbaab;
+  --background-end: #ffffff;
+  --border-radius: 4px;
+  --bg-1: #dcdcdc;
+  --border-1: #333;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground: #fff;
+    --background-start: #232526;
+    --background-end: #414345;
+
+    --bg-1: #4b4b4b;
+    --border-1: #9a9a9a;
+  }
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background-start);
+
+  font-size: 1.25rem;
+  line-height: 1.5rem;
+}

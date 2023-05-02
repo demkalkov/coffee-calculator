@@ -20,13 +20,13 @@ jobs:
         node-version: ${{ matrix.node-version }}
     - name: Production build of a project
       run: |
-        npm install
+        npm ci
         npm run build
     - name: Upload pages artifact
       uses: actions/upload-pages-artifact@v1
       with:
         path:
-          docs
+          out
 
   deploy:
     needs: build
